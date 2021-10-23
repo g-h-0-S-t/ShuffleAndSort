@@ -11,6 +11,7 @@ Step 5 - After the whole Tiles array is shuffled, generate the DOM (tileMaker) a
 **Sorting Algorithm:** I am using the **Compare Function** logic.
 
 **Screenshots:**  
+
 _**Mobile**_  
 
 ![image](https://user-images.githubusercontent.com/6196046/138571850-c16caf47-d929-44ab-a117-a9633daba069.png)  
