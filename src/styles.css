@@ -28,6 +28,13 @@ body {
     width: 33%;
     font-size: 100px;
     color: #FFFFFF;
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}
+
+.tile:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
 
 .actionButtons {
@@ -48,6 +55,11 @@ button {
     box-shadow: 0px 3px 1px #2B8EAD;
 }
 
+button:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
 header {
     font-weight: bold;
 }
@@ -57,18 +69,50 @@ footer {
     margin-top: 0.1rem;
 }
 
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
 @media (max-width: 376px) {
     body {
         background-color: #FFFFFF;
     }
-
-    .main,
-    .tiles,
-    .actionButtons {
+    .main, .tiles, .actionButtons {
         display: block;
         width: 100%;
     }
-
     .tile {
         width: 90%;
         font-size: 12px;
@@ -77,11 +121,9 @@ footer {
         line-height: 2.7rem;
         margin: 3px;
     }
-
     button {
         width: 100px;
     }
-
     header {
         background-color: #333333;
         color: #FFFFFF;
