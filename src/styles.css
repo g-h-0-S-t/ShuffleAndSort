@@ -30,7 +30,7 @@ body {
     width: 33%;
     font-size: 100px;    
     color: #FFFFFF;
-    animation: shake 0.5s;
+    animation: lookAtMeIAmScared 0.5s;
     animation-iteration-count: 1;
 }
 
