@@ -8,7 +8,7 @@ Step 3 - Then swap the elements between the random index and the loop index.
 Step 4 - In the next loop, ignore the previous index and continue from Step 2.  
 Step 5 - After the whole Tiles array is shuffled, generate the DOM (tileMaker) and resize UI (resizeTiles).  
 
-**Sorting Algorithm:** I am using the **Compare Function** logic.
+**Sorting Algorithm:** I am using the **Compare Function** logic - **_return (a - b)_**
 
 **Screenshots:**  
 
