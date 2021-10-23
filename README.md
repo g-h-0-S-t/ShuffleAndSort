@@ -12,6 +12,9 @@ Step 5 - After the whole Tiles array is shuffled, generate the DOM (tileMaker) a
 
 **Screenshots:**  
 _**Mobile**_  
+
 ![image](https://user-images.githubusercontent.com/6196046/138571850-c16caf47-d929-44ab-a117-a9633daba069.png)  
+
 _**Desktop**_  
+
 ![image](https://user-images.githubusercontent.com/6196046/138571866-1f5e8f8c-2cb5-4090-b0b9-cddf499d02c7.png)  
