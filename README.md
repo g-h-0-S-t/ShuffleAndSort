@@ -1,7 +1,7 @@
 # ShuffleAndSort
 A demo for shuffling and sorting Numbered Tiles.
 
-**Shuffle Algorithm:**  **The algorithm is based on _Fisher–Yates shuffle_ - Source : https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle**
+**Shuffle Algorithm:**  **The algorithm is based on _Fisher–Yates shuffle_ - Source : https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle**  
 Step 1 - While looping in a descending order...  
 Step 2 - I am taking a random index between (including) the loop index and the lowest index (0).  
 Step 3 - Then swap the elements between the random index and the loop index.  
