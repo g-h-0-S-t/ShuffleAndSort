@@ -1,7 +1,9 @@
 <img src="https://cdn.hipwallpaper.com/i/46/23/ZEhrbg.png" width="200" title="Education and Fun" alt="Education and Fun" />  
 
 # ShuffleAndSort
-A demo for shuffling and sorting Numbered Tiles.
+A demo for shuffling and sorting Numbered Tiles.  
+I wrote this as a solution for an interview question for the Organization that I was attending interviews for at the time.  
+I went ahead and had some fun with it. I will eventually keep modifying it in future for more interesting stuffs, probably will include a mini game next time.  
 
 **Shuffle Algorithm:**  **The algorithm is based on _Fisher–Yates shuffle_ - Source : https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle**  
 Step 1 - While looping in a descending order...  
