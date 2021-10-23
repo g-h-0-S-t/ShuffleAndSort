@@ -64,6 +64,7 @@ button {
 button:hover {
     animation: lookAtMeIAmScared 0.5s;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 header {
