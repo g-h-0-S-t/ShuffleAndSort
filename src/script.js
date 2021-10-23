@@ -46,19 +46,25 @@
             let childNode = document.createElement('DIV');
             childNode.textContent = childMetadata.data;
             childNode.className = 'tile tile-' + childMetadata.data;
+            childNode.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
+
+            let funStuff = document.createElement('A');
+            funStuff.href = 'funStuffs/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+
             if (window.screen.width > 375) {
                 styleTag.innerHTML += `
-        .tile-${childMetadata.data} {
-            background-color: ${childMetadata.color};
-        }`;
+                .tile-${childMetadata.data} {
+                    background-color: ${childMetadata.color};
+                }`;
             } else {
                 styleTag.innerHTML += `
-        .tile-${childMetadata.data} {
-            background-color: #EFEFEF;
-            border-left: 5px solid ${childMetadata.color};
-        }`;
+                .tile-${childMetadata.data} {
+                    background-color: #EFEFEF;
+                    border-left: 5px solid ${childMetadata.color};
+                }`;
             }
-            parentNode.appendChild(childNode);
+            parentNode.appendChild(funStuff);
+            funStuff.appendChild(childNode);
         }
     }
 
