@@ -18,55 +18,47 @@
     // Generate the DOM for Tiles
     const tileMaker = (tiles) => {
 
-        // Generate Tile Container DOM based on device screen width
-        let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
-        document.querySelector('.main').innerHTML = (browserWidth > 540) ? `
-            <div class="tiles">
-            </div>
-            <div class="actionButtons">
-                <button onclick="shuffleTiles();">Shuffle</button>
-                <button onclick="sortTiles();">Sort</button>
-            </div>
-            ` : `
-            <div class="actionButtons">
-                <button onclick="shuffleTiles();">Shuffle</button>
-                <button onclick="sortTiles();">Sort</button>
-            </div>
-            <div class="tiles">
-            </div>
-            `;
-
         // Generate Tiles DOM and style tags for respective tiles
-        let parentNode = document.getElementsByClassName('tiles')[0];
-        parentNode.innerHTML = '';
-        let styleTag = document.createElement('STYLE');
-        styleTag.id = 'dynamicStyles';
-        document.head.appendChild(styleTag);
+        let parentNode1 = document.getElementsByClassName('tiles-1')[0];
+        let parentNode2 = document.getElementsByClassName('tiles-2')[0];
+        parentNode1.innerHTML = '';
+        let styleTag = document.getElementById('dynamicStyles');
+        styleTag.innerHTML = '';
+
         for (let i in tiles) {
             let childMetadata = tiles[i];
-            let childNode = document.createElement('DIV');
-            childNode.textContent = childMetadata.data;
-            childNode.className = 'tile tile-' + childMetadata.data;
-            childNode.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
 
-            let funStuff = document.createElement('A');
-            funStuff.href = 'funStuffs/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+            let childNode1 = document.createElement('DIV');
+            childNode1.textContent = childMetadata.data;
+            childNode1.className = 'tile tile-' + childMetadata.data;
+            childNode1.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
 
-            let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
-            if (browserWidth > 540) {
-                styleTag.innerHTML += `
-                .tile-${childMetadata.data} {
-                    background-color: ${childMetadata.color};
-                }`;
-            } else {
-                styleTag.innerHTML += `
-                .tile-${childMetadata.data} {
-                    background-color: #EFEFEF;
-                    border-left: 5px solid ${childMetadata.color};
-                }`;
-            }
-            parentNode.appendChild(funStuff);
-            funStuff.appendChild(childNode);
+            let childNode2 = document.createElement('DIV');
+            childNode2.textContent = childMetadata.data;
+            childNode2.className = 'tile tile-' + childMetadata.data;
+            childNode2.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
+
+            let funStuff1 = document.createElement('A');
+            funStuff1.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+
+            let funStuff2 = document.createElement('A');
+            funStuff2.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+
+            styleTag.innerHTML += `
+            .tiles.tiles-1 .tile-${childMetadata.data} {
+                background-color: ${childMetadata.color};
+            }`;
+            styleTag.innerHTML += `
+            .tiles.tiles-2 .tile-${childMetadata.data} {
+                background-color: #EFEFEF;
+                border-left: 5px solid ${childMetadata.color};
+            }`;
+
+            parentNode1.appendChild(funStuff1);
+            parentNode2.appendChild(funStuff2);
+
+            funStuff1.appendChild(childNode1);
+            funStuff2.appendChild(childNode2);
         }
     }
 
@@ -74,8 +66,8 @@
     const resizeTiles = () => {
         let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
         if (browserWidth > 540) {
-            var height = document.querySelector('.tile').offsetWidth + 'px';
-            document.querySelectorAll('.tile').forEach(function (v) {
+            var height = document.querySelector('.tiles-1 .tile').offsetWidth + 'px';
+            document.querySelectorAll('.tiles-1 .tile').forEach(function (v) {
                 v.style.lineHeight = v.style.height = height;
             });
         }
@@ -111,6 +103,7 @@
     // Expose 'shuffleTiles' and 'sortTiles' to Window
     window.shuffleTiles = shuffleTiles;
     window.sortTiles = sortTiles;
+    window.resizeTiles = resizeTiles;
 
     // Make Tiles and resize UI on load
     tileMaker(tiles);
