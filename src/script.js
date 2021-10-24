@@ -61,7 +61,7 @@
     const resizeTiles = () => {
         let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
         if (browserWidth > 540) {
-            var height = document.querySelector('.tiles-1 .tile').offsetWidth + 'px';
+            let height = document.querySelector('.tiles-1 .tile').offsetWidth + 'px';
             document.querySelectorAll('.tiles-1 .tile').forEach(function (v) {
                 v.style.lineHeight = v.style.height = height;
             });
