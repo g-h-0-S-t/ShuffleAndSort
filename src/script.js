@@ -29,25 +29,20 @@
             let childMetadata = tiles[i];
 
             let childNode1 = document.createElement('DIV');
-            childNode1.textContent = childMetadata.data;
-            childNode1.className = 'tile tile-' + childMetadata.data;
-            childNode1.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
-
             let childNode2 = document.createElement('DIV');
-            childNode2.textContent = childMetadata.data;
-            childNode2.className = 'tile tile-' + childMetadata.data;
-            childNode2.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
+            childNode1.textContent = childNode2.textContent = childMetadata.data;
+            childNode1.className = childNode2.className = 'tile tile-' + childMetadata.data;
+            childNode1.title = childNode2.title = 'TRY CLICKING ME TO SEE THE FUN STUFFS!!! THERE\'S A BONUS VID IN ONE OF THE TILES!!!';
 
             let funStuff1 = document.createElement('A');
-            funStuff1.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
-
             let funStuff2 = document.createElement('A');
-            funStuff2.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+            funStuff1.href = funStuff2.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
 
             styleTag.innerHTML += `
             .tiles.tiles-1 .tile-${childMetadata.data} {
                 background-color: ${childMetadata.color};
             }`;
+            
             styleTag.innerHTML += `
             .tiles.tiles-2 .tile-${childMetadata.data} {
                 background-color: #EFEFEF;
