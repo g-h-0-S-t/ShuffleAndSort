@@ -36,7 +36,7 @@
 
             let funStuff1 = document.createElement('A');
             let funStuff2 = document.createElement('A');
-            funStuff1.href = funStuff2.href = 'funStuff1s/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
+            funStuff1.href = funStuff2.href = 'funStuffs/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
 
             styleTag.innerHTML += `
             .tiles.tiles-1 .tile-${childMetadata.data} {
