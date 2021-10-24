@@ -19,7 +19,8 @@
     const tileMaker = (tiles) => {
 
         // Generate Tile Container DOM based on device screen width
-        document.querySelector('.main').innerHTML = (window.screen.width > 375) ? `
+        let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
+        document.querySelector('.main').innerHTML = (browserWidth > 375) ? `
             <div class="tiles">
             </div>
             <div class="actionButtons">
@@ -51,7 +52,8 @@
             let funStuff = document.createElement('A');
             funStuff.href = 'funStuffs/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
 
-            if (window.screen.width > 375) {
+            let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
+            if (browserWidth > 375) {
                 styleTag.innerHTML += `
                 .tile-${childMetadata.data} {
                     background-color: ${childMetadata.color};
@@ -70,7 +72,8 @@
 
     // Resize UI based on device screen width
     const resizeTiles = () => {
-        if (window.screen.width > 375) {
+        let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
+        if (browserWidth > 375) {
             var height = document.querySelector('.tile').offsetWidth + 'px';
             document.querySelectorAll('.tile').forEach(function (v) {
                 v.style.lineHeight = v.style.height = height;
