@@ -1,4 +1,5 @@
 /* reset css */
+
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +10,7 @@
 }
 
 /* desktop mode */
+
 body {
     background-color: #EFEFEF;
 }
@@ -25,10 +27,14 @@ body {
     width: calc(75% - 2px);
 }
 
+.tiles-2 {
+    display: none;
+}
+
 .tile {
     display: inline-block;
     width: 33%;
-    font-size: 100px;    
+    font-size: 100px;
     color: #FFFFFF;
     animation: lookAtMeIAmScared 0.5s;
     animation-iteration-count: 1;
@@ -78,6 +84,7 @@ footer {
 }
 
 /* mobile mode */
+
 @media (max-width: 541px) {
     body {
         background-color: #FFFFFF;
@@ -85,6 +92,12 @@ footer {
     .main, .tiles, .actionButtons {
         display: block;
         width: 100%;
+    }
+    .tiles-1 {
+        display: none;
+    }
+    .tiles-2 {
+        display: block;
     }
     .tile {
         width: 90%;
@@ -108,6 +121,7 @@ footer {
 }
 
 /* fun stuffs ;) */
+
 @keyframes lookAtMeIAmScared {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
