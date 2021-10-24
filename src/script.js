@@ -21,7 +21,7 @@
         // Generate Tiles DOM and style tags for respective tiles
         let parentNode1 = document.getElementsByClassName('tiles-1')[0];
         let parentNode2 = document.getElementsByClassName('tiles-2')[0];
-        parentNode1.innerHTML = '';
+        parentNode1.innerHTML = parentNode2.innerHTML = '';
         let styleTag = document.getElementById('dynamicStyles');
         styleTag.innerHTML = '';
 
@@ -42,7 +42,7 @@
             .tiles.tiles-1 .tile-${childMetadata.data} {
                 background-color: ${childMetadata.color};
             }`;
-            
+
             styleTag.innerHTML += `
             .tiles.tiles-2 .tile-${childMetadata.data} {
                 background-color: #EFEFEF;
