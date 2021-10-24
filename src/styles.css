@@ -33,7 +33,7 @@ body {
 
 .tile {
     display: inline-block;
-    width: 33%;
+    width: 27%;
     font-size: 100px;
     color: #FFFFFF;
     animation: lookAtMeIAmScared 0.5s;
@@ -76,11 +76,16 @@ button:hover {
 
 header {
     font-weight: bold;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-weight: normal;
+    height: 2rem;
+    padding: 0.9rem 0 0 0;
 }
 
 footer {
     font-style: italic;
-    margin-top: 0.1rem;
+    margin-top: 0.5rem;
 }
 
 /* mobile mode */
