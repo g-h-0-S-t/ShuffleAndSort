@@ -22,10 +22,10 @@ Step 5 - After the whole Tiles array is shuffled, generate the DOM (tileMaker) a
 
 _**Mobile**_  
 
-![image](https://user-images.githubusercontent.com/6196046/138571850-c16caf47-d929-44ab-a117-a9633daba069.png)  
+![image](https://user-images.githubusercontent.com/6196046/138576075-04820c7f-dd81-4eda-9f53-1f6154096afa.png)  
 
 _**Desktop**_  
 
-![image](https://user-images.githubusercontent.com/6196046/138575098-52e9a14e-b3ef-41f0-87b3-ba35c3e97b39.png)  
+![image](https://user-images.githubusercontent.com/6196046/138576086-70fddc2b-c804-4fd6-9a88-2b331a006ae7.png)  
 
 # Pssk! Bonus : There are Fun Stuffs somewhere in there. Do check it out! Try hovering and clicking the Tiles. Cheers! Happy Learning!
