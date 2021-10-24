@@ -71,8 +71,9 @@
     // Resize UI based on device screen width
     const resizeTiles = () => {
         if (window.screen.width > 375) {
+            var height = document.querySelector('.tile').offsetWidth + 'px';
             document.querySelectorAll('.tile').forEach(function (v) {
-                v.style.lineHeight = v.style.height = v.offsetWidth + 'px';
+                v.style.lineHeight = v.style.height = height;
             });
         }
     };
