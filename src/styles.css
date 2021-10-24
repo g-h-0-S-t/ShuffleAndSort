@@ -70,7 +70,7 @@ button {
 
 button:hover {
     animation: lookAtMeIAmScared 0.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     cursor: pointer;
 }
 
