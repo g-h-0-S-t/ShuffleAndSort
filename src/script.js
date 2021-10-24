@@ -20,7 +20,7 @@
 
         // Generate Tile Container DOM based on device screen width
         let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
-        document.querySelector('.main').innerHTML = (browserWidth > 375) ? `
+        document.querySelector('.main').innerHTML = (browserWidth > 540) ? `
             <div class="tiles">
             </div>
             <div class="actionButtons">
@@ -53,7 +53,7 @@
             funStuff.href = 'funStuffs/' + childMetadata.data + ((childMetadata.data === 9) ? '.mp4' : '.gif');
 
             let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
-            if (browserWidth > 375) {
+            if (browserWidth > 540) {
                 styleTag.innerHTML += `
                 .tile-${childMetadata.data} {
                     background-color: ${childMetadata.color};
@@ -73,7 +73,7 @@
     // Resize UI based on device screen width
     const resizeTiles = () => {
         let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
-        if (browserWidth > 375) {
+        if (browserWidth > 540) {
             var height = document.querySelector('.tile').offsetWidth + 'px';
             document.querySelectorAll('.tile').forEach(function (v) {
                 v.style.lineHeight = v.style.height = height;
