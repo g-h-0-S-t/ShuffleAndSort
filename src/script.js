@@ -18,7 +18,7 @@
     // Generate the DOM for Tiles
     const tileMaker = (tiles) => {
 
-        // Generate Tiles DOM and style tags for respective tiles
+        // Generate Tiles DOM and styles for respective tiles
         let parentNode1 = document.getElementsByClassName('tiles-1')[0];
         let parentNode2 = document.getElementsByClassName('tiles-2')[0];
         parentNode1.innerHTML = parentNode2.innerHTML = '';
@@ -62,7 +62,7 @@
         let browserWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth, document.body.offsetWidth, document.documentElement.offsetWidth, document.documentElement.clientWidth);
         if (browserWidth > 540) {
             let height = document.querySelector('.tiles-1 .tile').offsetWidth + 'px';
-            document.querySelectorAll('.tiles-1 .tile').forEach(function (v) {
+            document.querySelectorAll('.tiles-1 .tile').forEach((v) => {
                 v.style.lineHeight = v.style.height = height;
             });
         }
